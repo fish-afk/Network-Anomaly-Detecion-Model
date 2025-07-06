@@ -33,22 +33,7 @@ We use the NSL-KDD dataset, an improved version of the KDD Cup 1999 dataset. It:
 
 Our project uses a modified version of this dataset (`KDD+.txt`).
 
-## Downloading and Loading the Dataset
-
-### Download
-
-```python
-import requests, zipfile, io
-
-url = "https://academy.hackthebox.com/storage/modules/292/KDD_dataset.zip"
-
-# Download and extract
-response = requests.get(url)
-z = zipfile.ZipFile(io.BytesIO(response.content))
-z.extractall('.')  # Extract to current directory
-```
-
-### Load into DataFrame
+## Loading the Dataset
 
 ```python
 import numpy as np
